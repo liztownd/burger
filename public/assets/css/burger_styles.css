@@ -1,0 +1,43 @@
+
+body {
+    background-color: #cfebea;
+}
+
+h1 {
+    color: black;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    width: 960;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    align-content: center;
+}
+
+li {
+    background-color: rgb(237, 249, 253);
+    padding: 10px;
+}
+
+section {
+    float: left;
+    margin: 20px;
+    width: 350px;
+}
+
+main {
+    width: 800px;
+    margin: auto;
+}
+
+.add-form {
+    text-align: center;
+    padding: 10px;
+}
