@@ -9,6 +9,10 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 header {
     width: 960;
     margin: auto;
@@ -29,15 +33,16 @@ li {
 section {
     float: left;
     margin: 20px;
-    width: 350px;
+    width: 400px;
 }
 
 main {
-    width: 800px;
+    width: 960px;
     margin: auto;
 }
 
 .add-form {
     text-align: center;
     padding: 10px;
+    clear: left;
 }

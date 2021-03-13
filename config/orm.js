@@ -10,12 +10,14 @@ const orm = {
         });
     },
 
-    insertOne(table, cols, cb){
+    insertOne(table, cols, value, cb){
         let queryString = `INSERT INTO ${table}`;
         queryString += ' (';
         queryString += cols.toString();
         queryString += ') ';
-        queryString += 'VALUES (?)';
+        queryString += 'VALUES ("';
+        queryString += value.toString();
+        queryString += '")';
 
         connection.query(queryString, (err, res) => {
             if (err) throw err;
@@ -23,7 +25,23 @@ const orm = {
         });
     },
 
-   // updateOne(table, cols, ){}
+   update(table, cols, value, id, cb){
+       let queryString = `UPDATE ${table} SET ${cols.toString()} = ${value.toString()} WHERE id = ${id} `
+
+       connection.query(queryString, (err, res) => {
+           if (err) throw err;
+           cb(res);
+       })
+   },
+
+   delete(table, id, cb) {
+       let queryString = `DELETE FROM ${table} WHERE id = ${id}`;
+
+        connection.query(queryString, (err, res) => {
+            if (err) throw err;
+            cb(res);
+        })
+   }
 
 }
 

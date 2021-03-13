@@ -5,13 +5,17 @@ const burger = {
         orm.selectAll('burgers', (res) => cb(res));
       },
 
-    insert(cb) {
-        orm.insertOne('burgers', 'burger_name', (res) => cb(res));
+    insert(value, cb) {
+        orm.insertOne('burgers', 'burger_name', value, (res) => cb(res));
       },
 
-    // updateOne(cb) {
-    //     orm.all('burger_name', (res) => cb(res));
-    //   },
+     update(value, id, cb) {
+         orm.update('burgers', 'devoured', value, id, (res) => cb(res));
+       },
+
+    delete(id, cb) {
+        orm.delete('burgers', id, (res) => cb(res));
+    }
 
 };
 
