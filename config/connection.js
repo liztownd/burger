@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const mysqlPass = require('../private/private.js')
-const connection;
+let connection;
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL)
