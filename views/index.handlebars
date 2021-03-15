@@ -3,40 +3,40 @@
     <img src="/assets/img/burger.png">
 </header>
 
-<main>
+<main class="container-lg mx-auto">
 
-    <section>
+    <div class="row d-flex justify-content-between">
+        <div class="col-5 text-center burger-block rounded-lg shadow">
+        <h2 class="my-3">Burgers to Devour!</h2>
 
-        <h2>Burgers to Devour!</h2>
-
-        <ul>
+        <ul class="text-left">
             {{#each burgers}}
             {{#unless devoured}}
             {{> burgers/burger-block devoured=false}}
             {{/unless}}
             {{/each}}
         </ul>
-    </section>
-    <section>
+   </div>
+<div class="col-5 text-center burger-block rounded-lg shadow">
+        <h2 class="my-3">Burgers that have been Devoured!</h2>
 
-        <h2>Burgers that have been Devoured!</h2>
-
-        <ul>
+        <ul class="text-left">
             {{#each burgers}}
             {{#if devoured}}
             {{> burgers/burger-block devoured=true}}
             {{/if}}
             {{/each}}
         </ul>
-    </section>
-<div class="add-form">
+</div>
+    </div>
+<div class="add-form my-5">
     <h2>Add a Burger</h2>
 <form id="create-form">
 
   <div class="form-group">
-    <label for="bur">Burger Name:</label>
-    <input type="text" id="bur" name="name">
-    <button type="submit">Add Burger</button>
+    {{!-- <label for="bur">Burger Name:</label> --}}
+    <input type="text" id="bur" name="name" placeholder="Burger Name">
+    <button type="submit button" class="btn btn-outline-dark mx-1">Add!</button>
 
   </div>
 

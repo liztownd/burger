@@ -7,10 +7,13 @@ h1 {
     color: black;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
 }
 
 h2 {
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 header {
@@ -26,23 +29,29 @@ img {
 }
 
 li {
-    background-color: rgb(237, 249, 253);
+    /* background-color: rgb(237, 249, 253); */
     padding: 10px;
+    list-style-type: none;
 }
 
-section {
-    float: left;
-    margin: 20px;
-    width: 400px;
-}
+/* section { */
+    /* float: left; */
+    /* margin: 20px; */
+    /* width: 400px; */
+/* } */
 
-main {
+/* main {
     width: 960px;
     margin: auto;
-}
+} */
 
 .add-form {
     text-align: center;
     padding: 10px;
-    clear: left;
+    /* clear: left; */
+}
+
+.burger-block {
+    background-color: rgb(237, 249, 253);
+
 }
