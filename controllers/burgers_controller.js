@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
       const hbsObject = {
         burgers: data,
       };
-      console.log(hbsObject);
+      //console.log(hbsObject);
       res.render('index', hbsObject);
     });
   });
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 
   router.post('/api/burgers', (req, res) => {
       const value = req.body.burger_name;
-      console.log(value);
+     // console.log(value);
       
       burger.insert(value, (result) => {
           res.json({ id: result.insertId, devoured: result.insertDevoured })

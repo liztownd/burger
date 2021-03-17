@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const newBurger = {
         burger_name: document.getElementById('bur').value.trim(),
       };
-      console.log(newBurger);
+      //console.log(newBurger);
 
       fetch('/api/burgers', {
         method: 'POST',
